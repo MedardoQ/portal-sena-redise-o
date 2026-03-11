@@ -82,7 +82,7 @@ header img {
 
 .alto-contraste {
   background-color: black !important;
-  color: yellow !important;
+  color: #E0E0E0 !important;
 }
 
 .alto-contraste .navbar {
@@ -90,7 +90,7 @@ header img {
 }
 
 .alto-contraste .nav-link {
-  color: yellow !important;
+  color: #E0E0E0 !important;
 }
 
 .btn-primary {
@@ -110,4 +110,14 @@ header img {
   top: 10px;
   left: 10px;
   z-index: 1000; /* para que quede encima */
+}
+
+.logo-contraste {
+  filter: brightness(0) invert(1); /* convierte la imagen a blanco */
+}
+
+.carousel-item img {
+  width: 100%;          /* que ocupen todo el ancho del carrusel */
+  height: 400px;        /* altura fija para todas */
+  object-fit: cover;    /* recorta la imagen manteniendo proporción */
 }

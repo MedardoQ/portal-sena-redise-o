@@ -25,7 +25,7 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="#inicio">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEikOeqzfINxvsNpHelPvi1weEH10dbLJoY6-VNrxiddZK2V9lMjStQg6sCA3uHeZE92s4iZ7MsxZPsrWsUJuueA6Sk_kuc5iY-FUgULdsenDKyYdfpAzq-4YXzsJupdlTD5qhQpAhVIbHHm/s200/logo_sena.png" 
+        <img id= "logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEikOeqzfINxvsNpHelPvi1weEH10dbLJoY6-VNrxiddZK2V9lMjStQg6sCA3uHeZE92s4iZ7MsxZPsrWsUJuueA6Sk_kuc5iY-FUgULdsenDKyYdfpAzq-4YXzsJupdlTD5qhQpAhVIbHHm/s200/logo_sena.png" 
              alt="Logo SENA" width="40" height="40" class="d-inline-block align-text-top">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
@@ -86,7 +86,11 @@
     
           <!-- Primer item del carrusel, marcado como activo para que se muestre al inicio -->
           <div class="carousel-item active">
-            <div class="p-5 bg-light text-dark">Última noticia 1</div>
+            <img src="https://www.sena.edu.co/es-co/Noticias/NoticiasImg/WhatsApp%20Image%202026-03-10%20at%206.02.19%20PM.jpeg" class="d-block w-100" alt="Noticia 1">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-3 rounded">Última noticia 1
+              <h5>Mujeres del Chocó accedieron a más de 200 vacantes</h5>
+              <p>Alrededor de 10 empresas ofrecieron oportunidades de trabajo en la Feria Expo Empleo Mujer del SENA.</p>
+            </div>
           </div>
     
           <!-- Segundo item del carrusel -->
@@ -142,7 +146,15 @@
   <div class="accesibilidad">
     <button class="btn btn-sm btn-outline-dark" onclick="document.body.style.fontSize='larger'">A+</button>
     <button class="btn btn-sm btn-outline-dark" onclick="document.body.style.fontSize='smaller'">A-</button>
-    <button class="btn btn-sm btn-outline-dark" onclick="document.body.classList.toggle('alto-contraste')">Contraste</button>
+    <button id="contrasteBtn" class="btn btn-sm btn-outline-dark" onclick="document.body.classList.toggle('alto-contraste')">Contraste</button>
+    <script>
+      const contrasteBtn = document.getElementById('contrasteBtn');
+      const logo = document.getElementById('logo');
+
+      contrasteBtn.addEventListener('click', () => {
+        logo.classList.toggle('logo-contraste');
+      });
+    </script>
   </div>
 
 
