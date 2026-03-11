@@ -16,6 +16,10 @@ body {
   position: relative;
 }
 
+/*#loadingOverlay {
+  z-index: 2000; /* para que quede encima de todo */
+/*}
+
 /* Overlay para mejorar legibilidad del texto */
 .hero::before {
   content: "";
