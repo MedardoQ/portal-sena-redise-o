@@ -2,73 +2,27 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Servicio Nacional de Aprendizaje |SENA (Rediseño)</title>
+  <title>Portal SENA - Rediseño Responsive</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Favicon desde internet-->
-   <link rel="icon" type="image/png" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEikOeqzfINxvsNpHelPvi1weEH10dbLJoY6-VNrxiddZK2V9lMjStQg6sCA3uHeZE92s4iZ7MsxZPsrWsUJuueA6Sk_kuc5iY-FUgULdsenDKyYdfpAzq-4YXzsJupdlTD5qhQpAhVIbHHm/s200/logo_sena.png">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://www.sena.edu.co/es-co/PublishingImages/logo-sena.png">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      background-color: #f9f9f9;
-    }
-    header {
-      background-color: #006400;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-    .navbar {
-      background-color: #008000;
-    }
-    .navbar-nav .nav-link {
-      color: white !important;
-      font-weight: bold;
-    }
-    .navbar-nav .nav-link:hover {
-      background-color: #004d00;
-      border-radius: 5px;
-    }
-    .news h2 {
-      border-bottom: 2px solid #006400;
-      padding-bottom: 0.5rem;
-    }
-    .accesibilidad {
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      background: #eee;
-      padding: 0.5rem;
-      border-radius: 8px;
-      z-index: 1000;
-    }
-    .alto-contraste {
-      background-color: black !important;
-      color: yellow !important;
-    }
-    .alto-contraste .navbar {
-      background-color: black !important;
-    }
-    .alto-contraste .nav-link {
-      color: yellow !important;
-    }
-  </style>
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
     <h1>Portal SENA - Rediseño Responsive</h1>
   </header>
 
-  <!-- Menú reorganizado con Bootstrap -->
+  <!-- Menú reorganizado con logo -->
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="#inicio">
-      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEikOeqzfINxvsNpHelPvi1weEH10dbLJoY6-VNrxiddZK2V9lMjStQg6sCA3uHeZE92s4iZ7MsxZPsrWsUJuueA6Sk_kuc5iY-FUgULdsenDKyYdfpAzq-4YXzsJupdlTD5qhQpAhVIbHHm/s200/logo_sena.png" 
-           alt="Logo SENA" 
-           width="40" 
-           height="40" 
-           class="d-inline-block align-text-top">
-       </a>
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEikOeqzfINxvsNpHelPvi1weEH10dbLJoY6-VNrxiddZK2V9lMjStQg6sCA3uHeZE92s4iZ7MsxZPsrWsUJuueA6Sk_kuc5iY-FUgULdsenDKyYdfpAzq-4YXzsJupdlTD5qhQpAhVIbHHm/s200/logo_sena.png" 
+             alt="Logo SENA" width="40" height="40" class="d-inline-block align-text-top">
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -80,11 +34,23 @@
           <li class="nav-item"><a class="nav-link" href="#tramites">Trámites</a></li>
           <li class="nav-item"><a class="nav-link" href="#atencion">Atención Ciudadana</a></li>
         </ul>
+        <!-- Buscador -->
+        <form class="d-flex ms-auto">
+          <input class="form-control me-2" type="search" placeholder="Buscar cursos o trámites">
+          <button class="btn btn-outline-light" type="submit">Buscar</button>
+        </form>
       </div>
     </div>
   </nav>
 
   <main class="container my-4">
+    <!-- Hero section -->
+    <section class="hero text-center p-5 bg-light mb-4">
+      <h2>Formación gratuita para todos los colombianos</h2>
+      <p>Accede a programas de estudio, empleo y emprendimiento.</p>
+      <a href="#inscripcion" class="btn btn-success btn-lg">Inscríbete ahora</a>
+    </section>
+
     <!-- Noticias destacadas -->
     <section class="news mb-4">
       <h2>Últimas Noticias</h2>
@@ -108,8 +74,8 @@
       </div>
     </section>
 
-    <!-- Formulario con validación inmediata -->
-    <section class="formulario">
+    <!-- Formulario -->
+    <section id="inscripcion" class="formulario">
       <h2>Inscripción</h2>
       <form id="inscripcionForm" class="needs-validation" novalidate>
         <div class="mb-3">
@@ -127,6 +93,12 @@
     </section>
   </main>
 
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center p-4 mt-5">
+    <p>© 2026 SENA - Servicio Nacional de Aprendizaje</p>
+    <p><a href="https://www.sena.edu.co" class="text-white">Portal oficial</a> | Contacto: info@sena.edu.co</p>
+  </footer>
+
   <!-- Panel de accesibilidad -->
   <div class="accesibilidad">
     <button class="btn btn-sm btn-outline-dark" onclick="document.body.style.fontSize='larger'">A+</button>
@@ -136,23 +108,6 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Validación inmediata con Bootstrap
-    (function () {
-      'use strict'
-      const forms = document.querySelectorAll('.needs-validation')
-      Array.from(forms).forEach(function (form) {
-        form.addEventListener('submit', function (event) {
-          if (!form.checkValidity()) {
-            event.preventDefault()
-            event.stopPropagation()
-          } else {
-            alert("Formulario enviado con éxito.");
-          }
-          form.classList.add('was-validated')
-        }, false)
-      })
-    })()
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
