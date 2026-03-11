@@ -2,6 +2,33 @@ body {
   background-color: #f9f9f9;
 }
 
+.hero {
+  background-image: url("https://img.freepik.com/foto-gratis/utiles-escolares-color-verde-fondo-banner-regreso-escuela-diseno-web_34050-479.jpg?size=626&ext=jpg"); /* aquí va el link directo */
+  background-position: center;   /* centra la imagen */
+  background-repeat: no-repeat;  /* evita que se repita */
+  background-size: cover;        /* ajusta la imagen al recuadro */
+  min-height: 400px;             /* define altura mínima */
+  display: flex;                 /* centra contenido */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+/* Overlay para mejorar legibilidad del texto */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.4); /* oscurece la imagen */
+}
+
+.hero > div {
+  position: relative; /* asegura que el texto quede encima del overlay */
+}
+
+
 header {
   background-color: #006400;
   color: white;
